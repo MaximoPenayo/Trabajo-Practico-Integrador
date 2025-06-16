@@ -15,7 +15,7 @@ Este proyecto es un sistema de gestión de ventas desarrollado en lenguaje C, or
 
 ---
 
-## 🧑‍💻 Tecnologías utilizadas
+## 🧑‍💻 Tecnologías y Conceptos utilizados
 
 - Lenguaje: **C**
 - Entrada/Salida estándar
