@@ -70,8 +70,8 @@ Este sistema fue desarrollado como ejercicio práctico de:
 
 ---
 
-## 🛠️ Autor
+## 🛠️ Autores
 
-**Maxi**  
-Estudiante de Programación 1  
-GitHub: [Tu usuario de GitHub]
+**Maximo Joel Penayo**  
+**Fabricio Alegre**  
+Estudiantes de Programación 1  
