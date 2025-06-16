@@ -30,15 +30,15 @@ Este proyecto es un sistema de gestión de ventas desarrollado en lenguaje C, or
 ### En **Windows** (con [MinGW](https://www.mingw-w64.org/)):
 
 ```bash
-gcc main.c -o kiosco.exe
-./kiosco.exe
+gcc main.c -o main.exe
+./main.exe
 ```
 
 ### En **Linux**:
 
 ```bash
-gcc main.c -o kiosco
-./kiosco
+gcc main.c -o main
+./main
 ```
 
 > ⚠️ Asegurate de que el archivo `main.c` esté en la misma carpeta desde donde ejecutás el comando.
