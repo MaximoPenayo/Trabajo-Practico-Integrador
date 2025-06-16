@@ -1,4 +1,4 @@
-# 📦 Registro de Ventas de Kiosco – Proyecto en C
+# 📦 Registro de Ventas de Kiosco
 
 Este proyecto es un sistema de gestión de ventas desarrollado en lenguaje C, orientado a pequeños comercios como kioscos, cantinas o almacenes. Permite registrar ventas del día, controlar stock, calcular totales y guardar un informe de las operaciones realizadas.
 
