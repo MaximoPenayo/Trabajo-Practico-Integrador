@@ -72,6 +72,6 @@ Este sistema fue desarrollado como ejercicio práctico de:
 
 ## 🛠️ Autores
 
-**Maximo Joel Penayo**  - DEV
-**Fabricio Alegre**  - DEV
-Estudiantes de Programación 1  - TUP - UTN FRRe
+**Maximo Joel Penayo - DEV** 
+**Fabricio Alegre - DEV** 
+**Estudiantes de Programación 1  - TUP - UTN FRRe**
