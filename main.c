@@ -58,3 +58,63 @@ producto productos[MAX_PRODUCTOS] = {
     {8, "Bon o Bon", 1100.0, 20},
     {9, "Empanadas", 600.0, 12}
 };
+
+int main() {
+    int opcion;
+    Venta* listaVentas = NULL;
+
+    do {
+        printf("\n===== CANTINA UTN FRRE =====\n");
+        printf("1 - Ver productos\n");
+        printf("2 - Registrar venta\n");
+        printf("3 - Mostrar ventas del dia\n");
+        printf("4 - Calcular total vendido\n");
+        printf("5 - Guardar ventas en archivo\n");
+        printf("6 - Salir\n");
+        printf("===========================\n");
+        printf("Seleccione una opcion: ");
+        scanf("%d", &opcion);
+
+        switch(opcion) {
+            case 1:
+
+                mostrarProductos(productos, MAX_PRODUCTOS);
+                esperarTecla();
+                system("cls");
+                break;
+            case 2:
+                listaVentas = registrarVenta(productos, MAX_PRODUCTOS, listaVentas);
+                esperarTecla();
+                system("cls");
+                break;
+            case 3:
+                mostrarVentas(listaVentas);
+                esperarTecla();
+                system("cls");
+                break;
+            case 4:
+                printf("\n===== TOTAL VENDIDO =====\n");
+                printf("$%.2f\n", calcularTotal(listaVentas));
+                printf("=========================\n");
+                esperarTecla();
+                system("cls");
+                break;
+            case 5:
+                guardarVentasArchivo(listaVentas, productos, "ventas_dia.txt");
+                printf("\n=========================\n");
+                printf("Ventas guardadas en 'ventas_dia.txt'\n");
+                printf("=========================\n");
+                esperarTecla();
+                system("cls");
+                break;
+            case 6:
+                printf("Saliendo...\n");
+                break;
+            default:
+                printf("Opcion Invalida\n");
+        }
+    } while(opcion != 6);
+
+
+    return 0;
+}
