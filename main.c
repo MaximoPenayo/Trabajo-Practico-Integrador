@@ -118,3 +118,13 @@ int main() {
 
     return 0;
 }
+
+void mostrarProductos(producto productos[], int n) {
+	int i;
+    printf("\n=================PRECIOS=============\n");
+    printf("Producto\t|  Precio    | Stock\n");
+    for (i = 0; i < n; i++) {
+        printf("%d.%s\t  $%.2f\t%d\n", productos[i].id, productos[i].nombre, productos[i].precio, productos[i].stock);
+    }
+    printf("=====================================\n");
+}
