@@ -27,4 +27,22 @@
 #define MAX_PRODUCTOS 9
 #define MAX_NOMBRE 50
 
+typedef struct {
+    int id;
+    char nombre[MAX_NOMBRE];
+    float precio;
+    int stock;
+} producto;
 
+typedef struct Venta {
+    int idProducto;
+    int cantidad;
+    float total;
+    struct Venta siguiente;
+} Venta;
+
+void mostrarProductos(producto productos[], int n);
+Venta registrarVenta(producto productos[], int n, Venta* listaVentas);
+void guardarVentasArchivo(Venta* lista, producto productos[], const char* nombreArchivo);
+void mostrarVentas(Venta* lista);
+float calcularTotal(Venta* lista);
