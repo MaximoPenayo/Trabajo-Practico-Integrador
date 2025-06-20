@@ -161,3 +161,17 @@ Venta* registrarVenta(producto productos[], int n, Venta* listaVentas) {
     printf("Producto no encontrado.\n");
     return listaVentas;
 }
+
+void mostrarVentas(Venta* lista) {
+    printf("\n\t===== VENTAS DEL DIA =====\n");
+    if (!lista) {
+        printf("No hay ventas registradas\n");
+        printf("==========================\n");
+        return;
+    }
+    Venta* aux = lista;
+    while (aux) {
+        printf("Producto ID: %d | Cantidad: %d | Total: $%.2f\n", aux->idProducto, aux->cantidad, aux->total);
+        aux = aux->siguiente;
+    }
+}
