@@ -186,7 +186,7 @@ float calcularTotal(Venta* lista) {
     return total;
 }
 
-void guardarVentasArchivo() {
+void guardarVentasArchivo(Venta* lista, producto productos[], const char* nombreArchivo) {
     FILE* archivo = fopen(nombreArchivo, "w");
     if (!archivo) {
         printf("Error al abrir archivo.\n");
