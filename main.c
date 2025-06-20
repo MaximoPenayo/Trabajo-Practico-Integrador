@@ -128,3 +128,36 @@ void mostrarProductos(producto productos[], int n) {
     }
     printf("=====================================\n");
 }
+
+Venta* registrarVenta(producto productos[], int n, Venta* listaVentas) {
+    int id, cantidad,i;
+    mostrarProductos(productos, n);
+    printf("Ingrese ID del Producto: ");
+    scanf("%d", &id);
+    printf("Ingrese cantidad: ");
+    scanf("%d", &cantidad);
+
+    for (i = 0; i < n; i++) {
+        if (productos[i].id == id) {
+            if (productos[i].stock >= cantidad) {
+                productos[i].stock -= cantidad;
+
+                Venta* nuevaVenta = (Venta*)malloc(sizeof(Venta));
+                nuevaVenta->idProducto = id;
+                nuevaVenta->cantidad = cantidad;
+                nuevaVenta->total = productos[i].precio * cantidad;
+                nuevaVenta->siguiente = listaVentas;
+                listaVentas = nuevaVenta;
+
+                printf("Venta registrada: %d x %s = $%.2f\n", cantidad, productos[i].nombre, nuevaVenta->total);
+                return listaVentas;
+            } else {
+                printf("Stock insuficiente.\n");
+                return listaVentas;
+            }
+        }
+    }
+
+    printf("Producto no encontrado.\n");
+    return listaVentas;
+}
