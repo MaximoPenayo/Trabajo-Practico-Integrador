@@ -194,11 +194,11 @@ void guardarVentasArchivo(Venta* lista, producto productos[], const char* nombre
     }
 
     fprintf(archivo, "\t====== Registro de Ventas ======\n");
-
+    int i;
     Venta* aux = lista;
     while (aux) {
         const char* nombreProd = "Desconocido";
-        for (int i = 0; i < MAX_PRODUCTOS; i++) {
+        for (i = 0; i < MAX_PRODUCTOS; i++) {
             if (productos[i].id == aux->idProducto) {
                 nombreProd = productos[i].nombre;
                 break;
