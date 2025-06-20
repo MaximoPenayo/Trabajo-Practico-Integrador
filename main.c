@@ -185,3 +185,30 @@ float calcularTotal(Venta* lista) {
     }
     return total;
 }
+
+void guardarVentasArchivo() {
+    FILE* archivo = fopen(nombreArchivo, "w");
+    if (!archivo) {
+        printf("Error al abrir archivo.\n");
+        return;
+    }
+
+    fprintf(archivo, "\t====== Registro de Ventas ======\n");
+
+    Venta* aux = lista;
+    while (aux) {
+        const char* nombreProd = "Desconocido";
+        for (int i = 0; i < MAX_PRODUCTOS; i++) {
+            if (productos[i].id == aux->idProducto) {
+                nombreProd = productos[i].nombre;
+                break;
+            }
+        }
+        fprintf(archivo, "Producto: %s | Cantidad: %d | Total: $%.2f\n",
+                nombreProd, aux->cantidad, aux->total);
+        aux = aux->siguiente;
+    }
+    fprintf(archivo, "\nTotal del dia: $%.2f\n", calcularTotal(lista));
+    fclose(archivo);
+}
+
