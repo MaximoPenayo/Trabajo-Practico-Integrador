@@ -175,3 +175,13 @@ void mostrarVentas(Venta* lista) {
         aux = aux->siguiente;
     }
 }
+
+float calcularTotal(Venta* lista) {
+    float total = 0;
+    Venta* aux = lista;
+    while (aux) {
+        total += aux->total;
+        aux = aux->siguiente;
+    }
+    return total;
+}
